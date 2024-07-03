@@ -16,11 +16,18 @@ const LIFT_FORCE = 10.0
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 var is_lifting: bool = false
 var character_to_lift: ControllableCharacter = null
+var dashed := false
+var dash_multiplier := 2.0
+var current_movement_multiplier := 1.0
+var i = 0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
+	else:
+		dashed = false
+		current_movement_multiplier = 1.0
 		
 	if !movement_blocked:
 		idle()
@@ -37,8 +44,18 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		move(direction)
 		rotate_model()
+		
+		if not is_on_floor() and Input.is_action_just_pressed("ui_accept"):
+			current_movement_multiplier = dash_multiplier
+			move(direction)
+			dashed = true
+			i = 0.0
 	else:
 		idle()
+		
+	if not is_on_floor() and dashed:
+		current_movement_multiplier = lerp(2.0, 1.0, i)
+		i += delta
 
 	move_and_slide()
 	
@@ -62,8 +79,8 @@ func get_input_direction() -> Vector3:
 	
 	
 func move(direction: Vector3) -> void:
-	velocity.x = direction.x * SPEED
-	velocity.z = direction.z * SPEED
+	velocity.x = direction.x * SPEED * current_movement_multiplier
+	velocity.z = direction.z * SPEED * current_movement_multiplier
 	
 	
 func rotate_model() -> void:
