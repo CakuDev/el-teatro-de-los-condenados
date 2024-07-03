@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://dk0i0jnljpji4"]
+
+[ext_resource type="PackedScene" uid="uid://vdyya2t3yg1g" path="res://characters/player/controllable_character/controllable_character.tscn" id="1_8q537"]
+[ext_resource type="PackedScene" uid="uid://ci8kecleabqy1" path="res://controllers/controllable_character_controller/controllable_character_controller.tscn" id="2_e3f6d"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_hui46"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_r7yf2"]
+size = Vector2(100, 100)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_wawof"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_mo44a"]
+
+[node name="Test" type="Node3D"]
+
+[node name="Floor" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("WorldBoundaryShape3D_hui46")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 0, 0, -1, 0, 0, 0, 0)
+mesh = SubResource("QuadMesh_r7yf2")
+
+[node name="ControllableCharacter1" parent="." instance=ExtResource("1_8q537")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.919712, 0)
+
+[node name="ControllableCharacter2" parent="." instance=ExtResource("1_8q537")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.49035, 0.919712, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.704634, 0.709571, 0, -0.709571, 0.704634, 2.4462, 8.84577, 9.94739)
+fov = 90.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 6.43756, 3.39697)
+
+[node name="Obstacle" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.74245, 1.43268, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacle"]
+shape = SubResource("CylinderShape3D_wawof")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Obstacle"]
+mesh = SubResource("CylinderMesh_mo44a")
+skeleton = NodePath("../..")
+
+[node name="Obstacle2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.49705, 0, 0, 0, 1, 4.58596, 1.02819, -0.0226536)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacle2"]
+shape = SubResource("CylinderShape3D_wawof")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Obstacle2"]
+mesh = SubResource("CylinderMesh_mo44a")
+skeleton = NodePath("../..")
+
+[node name="ControllableCharacterController" parent="." node_paths=PackedStringArray("characters") instance=ExtResource("2_e3f6d")]
+characters = [NodePath("../ControllableCharacter1"), NodePath("../ControllableCharacter2")]
