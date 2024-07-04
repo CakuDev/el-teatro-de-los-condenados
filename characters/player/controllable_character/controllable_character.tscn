@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://vdyya2t3yg1g"]
+[gd_scene load_steps=6 format=3 uid="uid://vdyya2t3yg1g"]
 
 [ext_resource type="Script" path="res://characters/player/controllable_character/controllable_character.gd" id="1_5vvsn"]
 [ext_resource type="PackedScene" uid="uid://c7sliv5mb4f52" path="res://characters/player/controllable_character/model.tscn" id="2_62krh"]
@@ -9,6 +9,10 @@ height = 4.9891
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_xvskg"]
 height = 1.8908
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_dvwq3"]
+height = 1.8908
+radius = 5.06716
 
 [node name="ControllableCharacter" type="CharacterBody3D"]
 script = ExtResource("1_5vvsn")
@@ -25,5 +29,13 @@ shape = SubResource("CapsuleShape3D_gp6ub")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.62499, 1.88433)
 shape = SubResource("CylinderShape3D_xvskg")
 
+[node name="GroupArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GroupArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.625, 0)
+shape = SubResource("CylinderShape3D_dvwq3")
+
 [connection signal="body_entered" from="Model/ActionArea" to="." method="_on_action_area_body_entered"]
 [connection signal="body_exited" from="Model/ActionArea" to="." method="_on_action_area_body_exited"]
+[connection signal="body_entered" from="GroupArea" to="." method="_on_group_area_body_entered"]
+[connection signal="body_exited" from="GroupArea" to="." method="_on_group_area_body_exited"]

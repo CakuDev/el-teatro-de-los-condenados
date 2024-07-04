@@ -57,4 +57,5 @@ mesh = SubResource("CylinderMesh_mo44a")
 skeleton = NodePath("../..")
 
 [node name="ControllableCharacterController" parent="." node_paths=PackedStringArray("characters") instance=ExtResource("2_e3f6d")]
+unique_name_in_owner = true
 characters = [NodePath("../ControllableCharacter1"), NodePath("../ControllableCharacter2")]
