@@ -40,10 +40,10 @@ func _physics_process(delta: float) -> void:
 	if lift_condition():
 		lift()
 		
-	if group_condition():
-		group()
-	elif ungroup_condition():
-		ungroup()
+	#if group_condition():
+	#	group()
+	#elif ungroup_condition():
+	#	ungroup()
 
 	if jump_condition():
 		jump(JUMP_VELOCITY)
