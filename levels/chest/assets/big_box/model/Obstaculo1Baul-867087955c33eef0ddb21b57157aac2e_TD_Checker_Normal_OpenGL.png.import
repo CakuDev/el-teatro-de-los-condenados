@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dtpw4l6ius0xx"
+path.s3tc="res://.godot/imported/Obstaculo1Baul-867087955c33eef0ddb21b57157aac2e_TD_Checker_Normal_OpenGL.png-3746197254b2b6b81bfe42ca9ea807de.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "aad391ff53bcd66aeefd921d783ac3a9"
+}
+
+[deps]
+
+source_file="res://levels/chest/assets/big_box/model/Obstaculo1Baul-867087955c33eef0ddb21b57157aac2e_TD_Checker_Normal_OpenGL.png"
+dest_files=["res://.godot/imported/Obstaculo1Baul-867087955c33eef0ddb21b57157aac2e_TD_Checker_Normal_OpenGL.png-3746197254b2b6b81bfe42ca9ea807de.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://levels/chest/assets/big_box/model/Obstaculo1Baul-867087955c33eef0ddb21b57157aac2e_TD_Checker_Normal_OpenGL.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://bi2k840r065dc"]
+
+[ext_resource type="Texture2D" uid="uid://ddybi0lymleva" path="res://levels/tutorial/assets/silk_thread/models/Obstaculo_2_Base_color.png" id="1_wdank"]
+[ext_resource type="Texture2D" uid="uid://d2rfe38apj745" path="res://levels/tutorial/assets/silk_thread/models/Obstaculo_2_Height.png" id="2_uywwn"]
+[ext_resource type="Texture2D" uid="uid://dxp56hdych56v" path="res://levels/tutorial/assets/silk_thread/models/Obstaculo_2_Metallic.png" id="3_t07wx"]
+[ext_resource type="Texture2D" uid="uid://brrkhp8hu3qth" path="res://levels/tutorial/assets/silk_thread/models/Obstaculo_2_Normal_OpenGL.png" id="4_c4u41"]
+[ext_resource type="Texture2D" uid="uid://cy7rmw4ax2u01" path="res://levels/tutorial/assets/silk_thread/models/Obstaculo_2_Roughness.png" id="5_fpmjd"]
+
+[resource]
+albedo_texture = ExtResource("1_wdank")
+metallic = 1.0
+metallic_texture = ExtResource("3_t07wx")
+roughness_texture = ExtResource("5_fpmjd")
+normal_enabled = true
+normal_texture = ExtResource("4_c4u41")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_uywwn")

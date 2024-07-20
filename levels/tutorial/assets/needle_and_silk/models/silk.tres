@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://dr8gvml4fqpx4"]
+
+[ext_resource type="Texture2D" uid="uid://duqyhkq1fvv0n" path="res://levels/tutorial/assets/needle_and_silk/models/Cuerda_Base_color.png" id="1_nwfmc"]
+[ext_resource type="Texture2D" uid="uid://diy40aqc0ilmk" path="res://levels/tutorial/assets/needle_and_silk/models/Cuerda_Height.png" id="2_45e4l"]
+[ext_resource type="Texture2D" uid="uid://cni42wgll52kh" path="res://levels/tutorial/assets/needle_and_silk/models/Cuerda_Metallic.png" id="3_6wpbp"]
+[ext_resource type="Texture2D" uid="uid://5rhhfelu5mv6" path="res://levels/tutorial/assets/needle_and_silk/models/Cuerda_Normal_OpenGL.png" id="4_hccpg"]
+[ext_resource type="Texture2D" uid="uid://bdcawhsd8tygo" path="res://levels/tutorial/assets/needle_and_silk/models/Cuerda_Roughness.png" id="5_5totw"]
+
+[resource]
+albedo_texture = ExtResource("1_nwfmc")
+metallic = 1.0
+metallic_texture = ExtResource("3_6wpbp")
+roughness_texture = ExtResource("5_5totw")
+normal_enabled = true
+normal_texture = ExtResource("4_hccpg")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_45e4l")

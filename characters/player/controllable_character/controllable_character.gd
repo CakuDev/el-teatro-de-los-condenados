@@ -9,7 +9,7 @@ const JUMP_VELOCITY = 6.0
 const LIFT_FORCE = 10.0
 
 
-@onready var model: Model = $"Model"
+@onready var model: Model = %Model
 @onready var controllable_character_controller: ControllableCharacterController = %ControllableCharacterController
 
 
@@ -62,7 +62,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			idle()
 			
-		if not is_on_floor() and dashed:
+		if not is_on_floor() and !is_grouping and dashed:
 			current_movement_multiplier = lerp(2.0, 1.0, i)
 			i += delta
 

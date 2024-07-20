@@ -1,0 +1,84 @@
+[gd_scene load_steps=7 format=3 uid="uid://dyj6g4tj3u0h4"]
+
+[ext_resource type="Script" path="res://Victory Screen.gd" id="1_av8j2"]
+[ext_resource type="Texture2D" uid="uid://dfoyf6i5x7xbm" path="res://menus/victory_screen/victory_screen.png" id="2_anrfl"]
+[ext_resource type="AudioStream" uid="uid://p4sk7g44rc0k" path="res://menus/victory_screen/win.wav" id="3_05t4v"]
+[ext_resource type="Texture2D" uid="uid://bldk5fouix04a" path="res://menus/victory_screen/f3end.png" id="4_cye2r"]
+[ext_resource type="Texture2D" uid="uid://dqjgvs4isgdw7" path="res://menus/victory_screen/f2end.png" id="5_xsoul"]
+[ext_resource type="Texture2D" uid="uid://b7ofapr8lttqk" path="res://menus/victory_screen/f1end.png" id="6_r1bt4"]
+
+[node name="Victory Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_av8j2")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_anrfl")
+expand_mode = 3
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_05t4v")
+autoplay = true
+bus = &"Music"
+
+[node name="BackMenuButton" type="Button" parent="."]
+custom_minimum_size = Vector2(403.33, 125)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -202.0
+offset_top = -180.0
+offset_right = 201.33
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
+text = "Volver al menú
+"
+
+[node name="F3" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_cye2r")
+expand_mode = 3
+
+[node name="F2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_xsoul")
+expand_mode = 3
+
+[node name="F1" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_r1bt4")
+expand_mode = 3
+
+[connection signal="button_up" from="BackMenuButton" to="." method="_on_back_menu_button_button_up"]

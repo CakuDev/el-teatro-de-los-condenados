@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://c0l6tqtldj22f"
+path.s3tc="res://.godot/imported/Cortinas-bd4f4425dabff7f3df30773550ac187f_ao_met_rough_Teatro_Roughness.png-0141a43f34fd705581a03346a9eb34bf.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "934166fd25e10054b31d17303c5d2787"
+}
+
+[deps]
+
+source_file="res://levels/tutorial/assets/theatre/models/Cortinas-bd4f4425dabff7f3df30773550ac187f_ao_met_rough_Teatro_Roughness.png"
+dest_files=["res://.godot/imported/Cortinas-bd4f4425dabff7f3df30773550ac187f_ao_met_rough_Teatro_Roughness.png-0141a43f34fd705581a03346a9eb34bf.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

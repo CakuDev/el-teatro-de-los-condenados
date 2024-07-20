@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://cjy3n5jbyy8mb"]
+
+[ext_resource type="Texture2D" uid="uid://dpksdf03428xt" path="res://levels/assets/button/models/Caja_Base_color.png" id="1_bbnkc"]
+[ext_resource type="Texture2D" uid="uid://sln4hlvi2g74" path="res://levels/assets/button/models/Caja_Height.png" id="2_o0aiw"]
+[ext_resource type="Texture2D" uid="uid://drbnn8xpnh40j" path="res://levels/assets/button/models/Caja_Metallic.png" id="3_bglju"]
+[ext_resource type="Texture2D" uid="uid://b7fest62o8rb3" path="res://levels/assets/button/models/Caja_Normal_OpenGL.png" id="4_o15gj"]
+[ext_resource type="Texture2D" uid="uid://cyndo4ryihnss" path="res://levels/assets/button/models/Caja_Roughness.png" id="5_hgew7"]
+
+[resource]
+albedo_texture = ExtResource("1_bbnkc")
+metallic = 1.0
+metallic_texture = ExtResource("3_bglju")
+roughness_texture = ExtResource("5_hgew7")
+normal_enabled = true
+normal_texture = ExtResource("4_o15gj")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_o0aiw")

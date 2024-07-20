@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://t0u1ly1ug1yr"]
+
+[ext_resource type="Texture2D" uid="uid://d08docva8kt7e" path="res://levels/tutorial/assets/needle_and_silk/models/Aguja_Base_color.png" id="1_3trdf"]
+[ext_resource type="Texture2D" uid="uid://dn1g52git6rcd" path="res://levels/tutorial/assets/needle_and_silk/models/Aguja_Height.png" id="2_n6s6r"]
+[ext_resource type="Texture2D" uid="uid://civo1ak6dx3ni" path="res://levels/tutorial/assets/needle_and_silk/models/Aguja_Metallic.png" id="3_bixxw"]
+[ext_resource type="Texture2D" uid="uid://8h2uve8i432v" path="res://levels/tutorial/assets/needle_and_silk/models/Aguja_Normal_OpenGL.png" id="4_fp2ht"]
+[ext_resource type="Texture2D" uid="uid://cx7sh2k3i820j" path="res://levels/tutorial/assets/needle_and_silk/models/Aguja_Roughness.png" id="5_cfiud"]
+
+[resource]
+albedo_texture = ExtResource("1_3trdf")
+metallic = 1.0
+metallic_texture = ExtResource("3_bixxw")
+roughness_texture = ExtResource("5_cfiud")
+normal_enabled = true
+normal_texture = ExtResource("4_fp2ht")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_n6s6r")

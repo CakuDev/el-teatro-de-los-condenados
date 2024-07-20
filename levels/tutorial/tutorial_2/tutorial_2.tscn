@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=3 uid="uid://bpwnvkv0mnyn1"]
+
+[ext_resource type="PackedScene" uid="uid://bc2tsakw2w554" path="res://levels/tutorial/assets/theatre/theatre.tscn" id="1_hlykn"]
+[ext_resource type="Script" path="res://levels/tutorial/tutorial_2/tutorial_2.gd" id="1_x4817"]
+[ext_resource type="PackedScene" uid="uid://ctmvsf84h62x4" path="res://levels/tutorial/assets/silk_thread/silk_thread.tscn" id="2_soogb"]
+[ext_resource type="PackedScene" uid="uid://bbjpx66lfv1w4" path="res://characters/player/mother/mother.tscn" id="3_tpxrw"]
+[ext_resource type="PackedScene" uid="uid://crk63e1rhaxq" path="res://characters/player/child/child.tscn" id="4_4nw07"]
+[ext_resource type="PackedScene" uid="uid://ci8kecleabqy1" path="res://controllers/controllable_character_controller/controllable_character_controller.tscn" id="5_ey8lp"]
+[ext_resource type="PackedScene" uid="uid://b7ex55l1lqsoq" path="res://characters/player/father/father.tscn" id="6_8isyt"]
+[ext_resource type="PackedScene" uid="uid://cqknmt3rs7rq2" path="res://levels/assets/button/button.tscn" id="7_v6w3g"]
+[ext_resource type="AudioStream" uid="uid://b1becqv7er5ts" path="res://levels/assets/sounds/tutorial_music.wav" id="9_7eo4p"]
+
+[node name="Tutorial 2" type="Node3D"]
+script = ExtResource("1_x4817")
+
+[node name="Theatre" parent="." instance=ExtResource("1_hlykn")]
+
+[node name="Silk Thread" parent="." instance=ExtResource("2_soogb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.7119, -11.3752, -17.3366)
+
+[node name="Silk Thread3" parent="." instance=ExtResource("2_soogb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.7119, -6.55074, -17.3366)
+
+[node name="Silk Thread2" parent="." instance=ExtResource("2_soogb")]
+transform = Transform3D(-2.88495e-08, 0, 0.66, 0, 0.66, 0, -0.66, 0, -2.88495e-08, 14.9967, -11.3752, -17.3366)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.993572, 0.0254652, -0.110302, 0, 0.97437, 0.224951, 0.113203, -0.223505, 0.968107, -6.77, 6.435, 13.441)
+fov = 90.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.143205, 0.949355, -0.279674, -0.672737, 0.300638, 0.676048, 0.72589, 0.0913329, 0.681719, -0.61708, 0, 4.21377)
+light_color = Color(0.605274, 0.605274, 0.605274, 1)
+shadow_enabled = true
+shadow_opacity = 0.7
+
+[node name="Mother" parent="." instance=ExtResource("3_tpxrw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.85127, -13.5318, -17.5676)
+
+[node name="Child" parent="." instance=ExtResource("4_4nw07")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5754, -13.2056, -13.4474)
+
+[node name="ControllableCharacterController" parent="." node_paths=PackedStringArray("characters") instance=ExtResource("5_ey8lp")]
+characters = [NodePath("../Mother"), NodePath("../Child"), NodePath("../Father")]
+
+[node name="Father" parent="." instance=ExtResource("6_8isyt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3159, -14.175, -18.5231)
+
+[node name="Button" parent="." instance=ExtResource("7_v6w3g")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 28.0437, -2.35402, -16.6847)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_7eo4p")
+autoplay = true
+bus = &"Music"
+
+[connection signal="on_pressed" from="Button" to="." method="_on_button_on_pressed"]

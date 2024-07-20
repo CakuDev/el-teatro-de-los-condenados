@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=3 uid="uid://ddvll28q1nu1u"]
+
+[ext_resource type="PackedScene" uid="uid://crk63e1rhaxq" path="res://characters/player/child/child.tscn" id="1_2rlma"]
+[ext_resource type="Script" path="res://levels/test/test_2.gd" id="1_qv6mk"]
+[ext_resource type="PackedScene" uid="uid://b7ex55l1lqsoq" path="res://characters/player/father/father.tscn" id="2_f5ic8"]
+[ext_resource type="PackedScene" uid="uid://bbjpx66lfv1w4" path="res://characters/player/mother/mother.tscn" id="3_8wg8o"]
+[ext_resource type="PackedScene" uid="uid://ci8kecleabqy1" path="res://controllers/controllable_character_controller/controllable_character_controller.tscn" id="4_qalph"]
+[ext_resource type="PackedScene" uid="uid://cqknmt3rs7rq2" path="res://levels/assets/button/button.tscn" id="5_8nihy"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_c6mua"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cokkq"]
+
+[node name="Test 2" type="Node3D"]
+script = ExtResource("1_qv6mk")
+
+[node name="Floor" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("WorldBoundaryShape3D_c6mua")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(19.8777, 0, 0, 0, 1, 0, 0, 0, 10.172, 0, 0, 0)
+mesh = SubResource("PlaneMesh_cokkq")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.704634, 0.709571, 0, -0.709571, 0.704634, 2.4462, 8.84577, 9.94739)
+fov = 90.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 6.43756, 3.39697)
+shadow_enabled = true
+shadow_opacity = 0.7
+
+[node name="Child" parent="." instance=ExtResource("1_2rlma")]
+
+[node name="Father" parent="." instance=ExtResource("2_f5ic8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.05315, 0, 0.302403)
+
+[node name="Mother" parent="." instance=ExtResource("3_8wg8o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 1)
+
+[node name="ControllableCharacterController" parent="." node_paths=PackedStringArray("characters") instance=ExtResource("4_qalph")]
+characters = [NodePath("../Mother"), NodePath("../Child"), NodePath("../Father")]
+
+[node name="Button" parent="." instance=ExtResource("5_8nihy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 2.19759, -4)
+
+[connection signal="on_pressed" from="Button" to="." method="_on_button_on_pressed"]

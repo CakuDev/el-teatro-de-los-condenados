@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://oa6sxmn6yxs7"]
+
+[ext_resource type="PackedScene" uid="uid://bwnyyjrcl0jgp" path="res://levels/attic/assets/chest/model/MiniBaul.fbx" id="1_ooung"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p3qch"]
+size = Vector3(11.2635, 7.82642, 18.9293)
+
+[node name="Chest" type="Node3D"]
+
+[node name="Root Scene" parent="." instance=ExtResource("1_ooung")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.589, 6.64, 2.45)
+
+[node name="Colliders" type="StaticBody3D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.146849, -0.639771, 0.126526)
+shape = SubResource("BoxShape3D_p3qch")

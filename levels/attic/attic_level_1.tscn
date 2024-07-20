@@ -1,0 +1,107 @@
+[gd_scene load_steps=12 format=3 uid="uid://btocu3ri56p7e"]
+
+[ext_resource type="Script" path="res://levels/attic/attic_level_1.gd" id="1_q147n"]
+[ext_resource type="PackedScene" uid="uid://jf16g5yke74x" path="res://levels/attic/assets/attic/attic.tscn" id="1_w7ikm"]
+[ext_resource type="PackedScene" uid="uid://oa6sxmn6yxs7" path="res://levels/attic/assets/chest/chest.tscn" id="2_hcvq6"]
+[ext_resource type="PackedScene" uid="uid://ctmvsf84h62x4" path="res://levels/tutorial/assets/silk_thread/silk_thread.tscn" id="3_xtqq2"]
+[ext_resource type="PackedScene" uid="uid://1sbr8rlrhshm" path="res://levels/chest/assets/big_box/big_box.tscn" id="4_2271s"]
+[ext_resource type="PackedScene" uid="uid://ctxcyk2kf18ik" path="res://levels/attic/assets/shelf/shelf.tscn" id="5_gwxrj"]
+[ext_resource type="PackedScene" uid="uid://vlw5tm2jx07r" path="res://levels/tutorial/assets/needle_and_silk/neddles_and_silk.tscn" id="6_ifvqo"]
+[ext_resource type="PackedScene" uid="uid://crk63e1rhaxq" path="res://characters/player/child/child.tscn" id="7_s5e1u"]
+[ext_resource type="PackedScene" uid="uid://ci8kecleabqy1" path="res://controllers/controllable_character_controller/controllable_character_controller.tscn" id="8_nxflk"]
+[ext_resource type="PackedScene" uid="uid://cqknmt3rs7rq2" path="res://levels/assets/button/button.tscn" id="9_2dmfy"]
+[ext_resource type="AudioStream" uid="uid://c1jkapyspe0jh" path="res://levels/assets/sounds/attic_music.wav" id="11_bgfiy"]
+
+[node name="Attic Level" type="Node3D"]
+script = ExtResource("1_q147n")
+
+[node name="Attic" parent="." instance=ExtResource("1_w7ikm")]
+
+[node name="Chest" parent="." instance=ExtResource("2_hcvq6")]
+transform = Transform3D(4.37114e-08, -6.11276e-15, 1, -8.74228e-08, -1.59962, 0, 1, -1.39844e-07, -4.37114e-08, -6.11179, -5.9966, -5.18368)
+
+[node name="Silk Thread" parent="." instance=ExtResource("3_xtqq2")]
+transform = Transform3D(0.535, 0, 0, 0, 0.535, 0, 0, 0, 0.535, -0.174991, -9.55846, 2.3096)
+
+[node name="Silk Thread4" parent="." instance=ExtResource("3_xtqq2")]
+transform = Transform3D(0.535, 0, 0, 0, 0.535, 0, 0, 0, 0.535, -27.3286, -0.557232, -2.55307)
+
+[node name="Silk Thread5" parent="." instance=ExtResource("3_xtqq2")]
+transform = Transform3D(0.535, 0, 0, 0, 0.535, 0, 0, 0, 0.535, -27.3286, -0.557232, -7.695)
+
+[node name="Silk Thread6" parent="." instance=ExtResource("3_xtqq2")]
+transform = Transform3D(0.535, 0, 0, 0, 0.535, 0, 0, 0, 0.535, -27.3286, 2.02952, -7.695)
+
+[node name="Silk Thread2" parent="." instance=ExtResource("3_xtqq2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.24609, -7.88733, 3.05807)
+
+[node name="Silk Thread3" parent="." instance=ExtResource("3_xtqq2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0252, -8.19146, 3.0392)
+
+[node name="Big Box" parent="." instance=ExtResource("4_2271s")]
+transform = Transform3D(-4.41485e-08, 0, 0.45, 0, 0.45, 0, -1.01, 0, -1.96701e-08, -27.9096, -8.72238, -0.354679)
+
+[node name="Big Box2" parent="." instance=ExtResource("4_2271s")]
+transform = Transform3D(-2.95052e-08, 0, 0.45, 0, 0.45, 0, -0.675, 0, -1.96701e-08, -27.9096, -4.20246, -3.60134)
+
+[node name="Shelf" parent="." instance=ExtResource("5_gwxrj")]
+transform = Transform3D(-6.49114e-08, 0, 1.485, 0, 1.485, 0, -1.485, 0, -6.49114e-08, -15.0117, 7.81196, -7.11497)
+
+[node name="Shelf2" parent="." instance=ExtResource("5_gwxrj")]
+transform = Transform3D(-6.49114e-08, 0, 1.15, 0, 1.485, 0, -1.485, 0, -5.02681e-08, 4.79717, 7.81196, -7.11497)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 12.74, 19.431)
+fov = 90.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.611803, 0.739885, 0.279764, -0.673012, 0.301053, 0.67559, 0.415635, -0.601613, 0.682136, -0.61708, 0, 4.21377)
+light_color = Color(0.605274, 0.605274, 0.605274, 1)
+shadow_enabled = true
+shadow_opacity = 0.7
+
+[node name="Child" parent="." instance=ExtResource("7_s5e1u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.33441, -9.9233, -1.45872)
+
+[node name="ControllableCharacterController" parent="." node_paths=PackedStringArray("characters") instance=ExtResource("8_nxflk")]
+characters = [NodePath("../Child")]
+
+[node name="Button" parent="." instance=ExtResource("9_2dmfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5439, -3.50074, -2.47067)
+
+[node name="Neddles And Silk" parent="." instance=ExtResource("6_ifvqo")]
+transform = Transform3D(0.685, 0, 0, 0, 0.685, 0, 0, 0, 0.685, 21.1393, -7.45091, 0)
+
+[node name="Neddles And Silk2" parent="." instance=ExtResource("6_ifvqo")]
+transform = Transform3D(-1.59547e-08, 0, 0.685, 0, 0.685, 0, -0.365, 0, -2.99423e-08, 14.292, -7.45091, -6.36875)
+
+[node name="Neddles And Silk3" parent="." instance=ExtResource("6_ifvqo")]
+transform = Transform3D(0.685, 0, 0, 0, 0.685, 0, 0, 0, 0.685, 21.1393, -2.71144, 0)
+
+[node name="Neddles And Silk4" parent="." instance=ExtResource("6_ifvqo")]
+transform = Transform3D(-1.59547e-08, 0, 0.685, 0, 0.685, 0, -0.365, 0, -2.99423e-08, 14.292, -2.71144, -6.36875)
+
+[node name="Neddles And Silk5" parent="." instance=ExtResource("6_ifvqo")]
+transform = Transform3D(0.685, 0, 0, 0, 0.685, 0, 0, 0, 0.685, 21.1393, 1.23793, 0)
+
+[node name="Neddles And Silk6" parent="." instance=ExtResource("6_ifvqo")]
+transform = Transform3D(-1.59547e-08, 0, 0.685, 0, 0.685, 0, -0.365, 0, -2.99423e-08, 14.292, 1.23793, -6.36875)
+
+[node name="Neddles And Silk7" parent="." instance=ExtResource("6_ifvqo")]
+transform = Transform3D(0.685, 0, 0, 0, 0.685, 0, 0, 0, 0.685, 21.1393, 5.95343, 0)
+
+[node name="Neddles And Silk8" parent="." instance=ExtResource("6_ifvqo")]
+transform = Transform3D(-1.59547e-08, 0, 0.685, 0, 0.685, 0, -0.365, 0, -2.99423e-08, 14.292, 5.95343, -6.36875)
+
+[node name="Neddles And Silk9" parent="." instance=ExtResource("6_ifvqo")]
+transform = Transform3D(0.685, 0, 0, 0, 0.685, 0, 0, 0, 0.685, 21.1393, 10.6317, 0)
+
+[node name="Neddles And Silk10" parent="." instance=ExtResource("6_ifvqo")]
+transform = Transform3D(-1.59547e-08, 0, 0.685, 0, 0.685, 0, -0.365, 0, -2.99423e-08, 14.292, 10.6317, -6.36875)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_bgfiy")
+autoplay = true
+bus = &"Music"
+
+[connection signal="on_pressed" from="Button" to="." method="_on_button_on_pressed"]

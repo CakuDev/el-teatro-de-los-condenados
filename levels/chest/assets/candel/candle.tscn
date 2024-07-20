@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8dr6j8pspllx"]
+
+[ext_resource type="PackedScene" uid="uid://bxy25g7ew8t0g" path="res://levels/chest/assets/candel/model/VelaBaul.fbx" id="1_4man0"]
+
+[node name="Candle" type="Node3D"]
+
+[node name="Root Scene" parent="." instance=ExtResource("1_4man0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.795, -5.405, 14.309)

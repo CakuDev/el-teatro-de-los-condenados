@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctxcyk2kf18ik"]
+
+[ext_resource type="PackedScene" uid="uid://b7qeuwkod6xr5" path="res://levels/attic/assets/shelf/model/Plataforma.fbx" id="1_kjqkc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ccnnf"]
+size = Vector3(4.42017, 0.15448, 9.34216)
+
+[node name="Shelf" type="Node3D"]
+
+[node name="Root Scene" parent="." instance=ExtResource("1_kjqkc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.412, -8.335, 4.364)
+
+[node name="Colliders" type="StaticBody3D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0904541, -9.15527e-05, 0.111023)
+shape = SubResource("BoxShape3D_ccnnf")

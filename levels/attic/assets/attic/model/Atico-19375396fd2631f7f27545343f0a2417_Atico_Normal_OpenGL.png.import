@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ba5d35irfl08s"
+path.s3tc="res://.godot/imported/Atico-19375396fd2631f7f27545343f0a2417_Atico_Normal_OpenGL.png-69183a3c783a1a9cf029b72e30eceaf5.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "50334a5167aa70d6f3f4a2e6f35b8314"
+}
+
+[deps]
+
+source_file="res://levels/attic/assets/attic/model/Atico-19375396fd2631f7f27545343f0a2417_Atico_Normal_OpenGL.png"
+dest_files=["res://.godot/imported/Atico-19375396fd2631f7f27545343f0a2417_Atico_Normal_OpenGL.png-69183a3c783a1a9cf029b72e30eceaf5.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://levels/attic/assets/attic/model/Atico-19375396fd2631f7f27545343f0a2417_Atico_Normal_OpenGL.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

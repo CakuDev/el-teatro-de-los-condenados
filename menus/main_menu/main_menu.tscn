@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://c28jrowukx1ag"]
+[gd_scene load_steps=6 format=3 uid="uid://c28jrowukx1ag"]
 
 [ext_resource type="Script" path="res://menus/main_menu/main_menu.gd" id="1_u5237"]
 [ext_resource type="PackedScene" uid="uid://cngwresdnf7yd" path="res://ui/options_menu/options_menu.tscn" id="2_b3hon"]
+[ext_resource type="Texture2D" uid="uid://c3l0xm37wxiam" path="res://menus/main_menu/MenuInicio.png" id="2_fhmq2"]
+[ext_resource type="AudioStream" uid="uid://b1becqv7er5ts" path="res://levels/assets/sounds/tutorial_music.wav" id="3_xxr8r"]
+[ext_resource type="PackedScene" uid="uid://cipw7y5k4tjbn" path="res://ui/controls_menu/controls_menu.tscn" id="4_1p3bj"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -19,51 +22,99 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.231373, 0.643137, 0.290196, 1)
+color = Color(0.393086, 0.393086, 0.393085, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fhmq2")
+expand_mode = 3
 
 [node name="Buttons" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 13
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -150.0
-offset_right = 150.0
+anchor_bottom = 0.5
+offset_left = -352.0
+offset_top = -138.0
+offset_right = 353.0
+offset_bottom = 367.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 50
+theme_override_constants/separation = 39
 alignment = 1
 
 [node name="StartButton" type="Button" parent="Buttons"]
-custom_minimum_size = Vector2(300, 125)
+custom_minimum_size = Vector2(300, 97.065)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 50
-text = "Start"
+text = "Jugar"
+
+[node name="Controls Menu" type="Button" parent="Buttons"]
+custom_minimum_size = Vector2(300, 97.065)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
+text = "Controles
+"
 
 [node name="OptionButton" type="Button" parent="Buttons"]
-custom_minimum_size = Vector2(300, 125)
+custom_minimum_size = Vector2(300, 97.065)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 50
-text = "Options"
+text = "Opciones"
 
 [node name="ExitButton" type="Button" parent="Buttons"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 125)
+custom_minimum_size = Vector2(300, 97.065)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 50
-text = "Exit"
+text = "Salir"
 
 [node name="OptionsMenu" parent="." instance=ExtResource("2_b3hon")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xxr8r")
+autoplay = true
+bus = &"Music"
+
+[node name="Controls Menu" parent="." instance=ExtResource("4_1p3bj")]
+visible = false
+layout_mode = 1
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(300, 125)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -750.0
+offset_top = 68.0
+offset_right = 751.0
+offset_bottom = 219.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 110
+text = "El Teatro de los Condenados"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="button_up" from="Buttons/StartButton" to="." method="_on_start_button_button_up"]
+[connection signal="button_up" from="Buttons/Controls Menu" to="." method="_on_controls_menu_button_up"]
 [connection signal="button_up" from="Buttons/OptionButton" to="." method="_on_option_button_button_up"]
 [connection signal="button_up" from="Buttons/ExitButton" to="." method="_on_exit_button_button_up"]

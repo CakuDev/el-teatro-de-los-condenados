@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://bc2tsakw2w554"]
+
+[ext_resource type="PackedScene" uid="uid://rtqe8kbao8qg" path="res://levels/tutorial/assets/theatre/models/Teatro_Atras.fbx" id="1_xrgt4"]
+[ext_resource type="PackedScene" uid="uid://1jifgusilj85" path="res://levels/tutorial/assets/theatre/models/Teatro_Delante.fbx" id="2_mma5u"]
+[ext_resource type="PackedScene" uid="uid://yamvb6qe7xq8" path="res://levels/tutorial/assets/theatre/models/Cortinas.fbx" id="3_6gncw"]
+[ext_resource type="PackedScene" uid="uid://dniovxyl4md6o" path="res://levels/tutorial/assets/theatre/models/Gomas_Cortinas.fbx" id="4_og300"]
+[ext_resource type="PackedScene" uid="uid://dc0vaeywkdj1a" path="res://levels/tutorial/assets/theatre/models/Marco.fbx" id="5_y1xy6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5belv"]
+size = Vector3(15.3473, 50.6615, 81.6016)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_msdiq"]
+size = Vector3(15.3473, 50.6615, 101.147)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n6tbq"]
+size = Vector3(15.3473, 50.6615, 101.147)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1aow4"]
+size = Vector3(15.3473, 50.6615, 101.147)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8w33b"]
+size = Vector3(15.3473, 46.4005, 101.147)
+
+[node name="Theatre" type="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Back Theatre" parent="." instance=ExtResource("1_xrgt4")]
+
+[node name="Front Theatre" parent="." instance=ExtResource("2_mma5u")]
+
+[node name="Curtains" parent="." instance=ExtResource("3_6gncw")]
+
+[node name="Curtains Drops" parent="." instance=ExtResource("4_og300")]
+
+[node name="Frame" parent="." instance=ExtResource("5_y1xy6")]
+
+[node name="Colliders" type="Node3D" parent="."]
+
+[node name="Back" type="StaticBody3D" parent="Colliders"]
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders/Back"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.9857, 4.37173, -0.876953)
+shape = SubResource("BoxShape3D_5belv")
+
+[node name="Front" type="StaticBody3D" parent="Colliders"]
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders/Front"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.39811, 4.37173, 8.89575)
+shape = SubResource("BoxShape3D_msdiq")
+
+[node name="Left" type="StaticBody3D" parent="Colliders"]
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders/Left"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.39811, 4.37173, -38.1241)
+shape = SubResource("BoxShape3D_n6tbq")
+
+[node name="Right" type="StaticBody3D" parent="Colliders"]
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders/Right"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.39811, 4.37173, 37.5335)
+shape = SubResource("BoxShape3D_1aow4")
+
+[node name="Floor" type="StaticBody3D" parent="Colliders"]
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders/Floor"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 18.5934, -21.8487, -2.01525)
+shape = SubResource("BoxShape3D_8w33b")

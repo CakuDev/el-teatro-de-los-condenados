@@ -22,6 +22,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.003, -0.0118103)
 shape = SubResource("CapsuleShape3D_gp6ub")
 
 [node name="Model" parent="." instance=ExtResource("2_62krh")]
+unique_name_in_owner = true
 
 [node name="ActionArea" type="Area3D" parent="Model"]
 

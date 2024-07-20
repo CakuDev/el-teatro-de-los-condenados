@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl3lj4fhlc27i"]
+
+[ext_resource type="PackedScene" uid="uid://e6dorsbpn50l" path="res://levels/tutorial/assets/door/models/Obstaculo_4.fbx" id="1_l4sfk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_17vab"]
+size = Vector3(7.96863, 9.87573, 0.66748)
+
+[node name="Door" type="Node3D"]
+
+[node name="Root Scene" parent="." instance=ExtResource("1_l4sfk")]
+
+[node name="Colliders" type="StaticBody3D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.20646, -9.44562, 10.7913)
+shape = SubResource("BoxShape3D_17vab")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Colliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.28, -9.44562, 10.7913)
+shape = SubResource("BoxShape3D_17vab")

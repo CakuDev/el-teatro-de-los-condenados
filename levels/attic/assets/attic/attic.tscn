@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://jf16g5yke74x"]
+
+[ext_resource type="PackedScene" uid="uid://ejg688to80j3" path="res://levels/attic/assets/attic/model/Atico.fbx" id="1_lg0o1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0kapi"]
+size = Vector3(64.8861, 1, 35.2456)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h48j7"]
+size = Vector3(38.9642, 1, 27.9799)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s72ha"]
+size = Vector3(38.9642, 1, 28.5024)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tbjr7"]
+size = Vector3(64.8861, 1, 37.4539)
+
+[node name="Attic" type="Node3D"]
+
+[node name="Root Scene" parent="." instance=ExtResource("1_lg0o1")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -26.6223)
+
+[node name="Colliders" type="StaticBody3D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.07066, -11.6434, -6.26234)
+shape = SubResource("BoxShape3D_0kapi")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Colliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.07066, 22.8574, -6.26234)
+shape = SubResource("BoxShape3D_0kapi")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Colliders"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 29.4631, 5.52462, -1.77813)
+shape = SubResource("BoxShape3D_h48j7")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Colliders"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -30.8589, 5.52462, -2.40439)
+shape = SubResource("BoxShape3D_s72ha")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Colliders"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2.07066, 3.52454, -10.9832)
+shape = SubResource("BoxShape3D_tbjr7")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Colliders"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2.07066, 5.42711, 11.6461)
+shape = SubResource("BoxShape3D_tbjr7")

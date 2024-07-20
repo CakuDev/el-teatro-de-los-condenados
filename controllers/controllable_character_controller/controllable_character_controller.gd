@@ -2,8 +2,14 @@ class_name ControllableCharacterController
 extends Node3D
 
 
-@export var characters: Array[ControllableCharacter]
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+
+
+@export var characters: Array[Node3D]
+
+
 var active_character := 0
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,6 +28,7 @@ func _process(_delta: float) -> void:
 		
 		characters[active_character].can_move = true
 		
+		audio_stream_player.play()
 	if Input.is_action_just_pressed("change_character_right"):
 		characters[active_character].can_move = false
 		if active_character == characters.size() - 1:
@@ -29,3 +36,4 @@ func _process(_delta: float) -> void:
 		else:
 			active_character = active_character + 1
 		characters[active_character].can_move = true
+		audio_stream_player.play()

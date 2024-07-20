@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://da1hi06x0021b"]
+
+[ext_resource type="PackedScene" uid="uid://dnx8jilej33dv" path="res://levels/chest/assets/chest/Baul.fbx" id="1_o5xjh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hymjn"]
+size = Vector3(60.9938, 1, 23.3112)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_08016"]
+size = Vector3(60.9938, 1, 36.9645)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vjubs"]
+size = Vector3(38.4837, 2.17676, 24.0253)
+
+[node name="Chest" type="Node3D"]
+
+[node name="Chest" parent="." instance=ExtResource("1_o5xjh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -30)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12453, -11.6143, -3.67105)
+shape = SubResource("BoxShape3D_hymjn")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1.12453, 5.58733, -14.2484)
+shape = SubResource("BoxShape3D_08016")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1.12453, 5.58733, 8.12041)
+shape = SubResource("BoxShape3D_08016")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12453, 23.4818, -3.67105)
+shape = SubResource("BoxShape3D_hymjn")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 30.0474, 5.80807, -3.99387)
+shape = SubResource("BoxShape3D_vjubs")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -31.4483, 5.80807, -4.04727)
+shape = SubResource("BoxShape3D_vjubs")

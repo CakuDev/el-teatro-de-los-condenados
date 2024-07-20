@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cj6hk0e1dilul"]
+
+[ext_resource type="PackedScene" uid="uid://b8fwawcfxlrlh" path="res://levels/tutorial/assets/wall_with_hole/models/Obstaculo_1.fbx" id="1_3m007"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wthsl"]
+size = Vector3(9.72932, 9.95483, 4.27365)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_orq37"]
+size = Vector3(11.3105, 9.95483, 4.27365)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tp3d5"]
+size = Vector3(24.436, 14.4305, 4.27365)
+
+[node name="Wall With Hole" type="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Root Scene" parent="." instance=ExtResource("1_3m007")]
+
+[node name="Colliders" type="StaticBody3D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.71887, -9.81485, 10.0248)
+shape = SubResource("BoxShape3D_wthsl")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Colliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3067, -9.81485, 10.0248)
+shape = SubResource("BoxShape3D_orq37")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Colliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7368, -4.48517, 10.0248)
+shape = SubResource("BoxShape3D_tp3d5")

@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ckx03e35c2jjw"
+path.s3tc="res://.godot/imported/Gomas_Cortinas-7102c3d84295e3eac391169fd6af1937_Teatro_Normal_OpenGL.png-66974383cf79259732e328415df273b1.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "e94ce5e889fa0d49b257b347657a1125"
+}
+
+[deps]
+
+source_file="res://levels/tutorial/assets/theatre/models/Gomas_Cortinas-7102c3d84295e3eac391169fd6af1937_Teatro_Normal_OpenGL.png"
+dest_files=["res://.godot/imported/Gomas_Cortinas-7102c3d84295e3eac391169fd6af1937_Teatro_Normal_OpenGL.png-66974383cf79259732e328415df273b1.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://levels/tutorial/theatre/models/Teatro/Gomas_Cortinas-7102c3d84295e3eac391169fd6af1937_Teatro_Normal_OpenGL.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

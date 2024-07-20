@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqknmt3rs7rq2"]
+
+[ext_resource type="PackedScene" uid="uid://bdxn6vealej3v" path="res://levels/assets/button/models/Boton.fbx" id="1_ordr5"]
+[ext_resource type="Script" path="res://levels/assets/button/button.gd" id="1_qr677"]
+[ext_resource type="PackedScene" uid="uid://24ma6038prb6" path="res://levels/assets/button/models/Caja.fbx" id="2_jhwir"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j5awl"]
+size = Vector3(4.46829, 4.40848, 5.77292)
+
+[node name="Button" type="StaticBody3D"]
+collision_mask = 3
+script = ExtResource("1_qr677")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.107834, -0.0597992, 0.692612)
+shape = SubResource("BoxShape3D_j5awl")
+
+[node name="Root Scene" parent="." instance=ExtResource("1_ordr5")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -20.908, -12.516, 27.406)
+
+[node name="Root Scene2" parent="." instance=ExtResource("2_jhwir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.006, 12.483, -26.632)

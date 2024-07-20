@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://crk63e1rhaxq"]
+
+[ext_resource type="Script" path="res://characters/player/child/child.gd" id="1_rhkn1"]
+[ext_resource type="PackedScene" uid="uid://dxbw0qxrr4xc4" path="res://characters/player/child/model/hijo.tscn" id="2_2vl33"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_spps5"]
+height = 1.8908
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6rrdb"]
+height = 2.21702
+
+[node name="Child" type="CharacterBody3D"]
+collision_layer = 2
+script = ExtResource("1_rhkn1")
+speed = 6.5
+jump_velocity = 13.0
+
+[node name="Hijo" parent="." instance=ExtResource("2_2vl33")]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="ActionArea" type="Area3D" parent="Hijo"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hijo/ActionArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.62499, 1.88433)
+shape = SubResource("CylinderShape3D_spps5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0417024, 1.13743, 0.142713)
+shape = SubResource("CapsuleShape3D_6rrdb")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[connection signal="body_entered" from="Hijo/ActionArea" to="." method="_on_action_area_body_entered"]
+[connection signal="body_exited" from="Hijo/ActionArea" to="." method="_on_action_area_body_exited"]

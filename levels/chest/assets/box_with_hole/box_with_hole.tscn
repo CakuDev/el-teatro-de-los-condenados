@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbr6h80xiadui"]
+
+[ext_resource type="PackedScene" uid="uid://dn31tgpu4xbrw" path="res://levels/chest/assets/box_with_hole/models/Obstaculo2Baul.fbx" id="1_qgt8g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_daj60"]
+size = Vector3(9.33826, 10.004, 8.25716)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_21mhk"]
+size = Vector3(21.8966, 11.7476, 8.25716)
+
+[node name="Box With Hole" type="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Root Scene" parent="." instance=ExtResource("1_qgt8g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.355, -5.024, 26.235)
+
+[node name="Colliders" type="StaticBody3D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.88513, -1.14635, 0.116844)
+shape = SubResource("BoxShape3D_daj60")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Colliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.69667, -1.14635, 0.116844)
+shape = SubResource("BoxShape3D_daj60")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Colliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.59081, 3.05906, 0.109053)
+shape = SubResource("BoxShape3D_21mhk")

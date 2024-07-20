@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://br5pkyranx6kn"]
+
+[ext_resource type="Texture2D" uid="uid://dll606ppgnqud" path="res://levels/assets/button/models/Boton_Base_color.png" id="1_mi8pd"]
+[ext_resource type="Texture2D" uid="uid://dsnf0b576trh5" path="res://levels/assets/button/models/Boton_Height.png" id="2_cl6g8"]
+[ext_resource type="Texture2D" uid="uid://c4t17vtp20qct" path="res://levels/assets/button/models/Boton_Metallic.png" id="3_s3dhr"]
+[ext_resource type="Texture2D" uid="uid://ci5wv5c76mda2" path="res://levels/assets/button/models/Boton_Normal_OpenGL.png" id="4_5ww3n"]
+[ext_resource type="Texture2D" uid="uid://ynd120jd4dah" path="res://levels/assets/button/models/Boton_Roughness.png" id="5_brquf"]
+
+[resource]
+albedo_texture = ExtResource("1_mi8pd")
+metallic = 1.0
+metallic_texture = ExtResource("3_s3dhr")
+roughness_texture = ExtResource("5_brquf")
+normal_enabled = true
+normal_texture = ExtResource("4_5ww3n")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_cl6g8")

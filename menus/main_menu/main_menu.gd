@@ -1,8 +1,12 @@
 extends Control
 
 
+const INTRO = preload("res://ui/intro/intro.tscn")
+
+
 @onready var options_menu: Control = %OptionsMenu
 @onready var exit_button: Button = %ExitButton
+@onready var controls_menu: Control = $"Controls Menu"
 
 
 func _ready() -> void:
@@ -11,7 +15,7 @@ func _ready() -> void:
 
 
 func _on_start_button_button_up() -> void:
-	print("Start game!")
+	get_tree().change_scene_to_packed(INTRO)
 
 
 func _on_option_button_button_up() -> void:
@@ -20,3 +24,7 @@ func _on_option_button_button_up() -> void:
 
 func _on_exit_button_button_up() -> void:
 	get_tree().quit()
+
+
+func _on_controls_menu_button_up() -> void:
+	controls_menu.visible = true

@@ -1,0 +1,228 @@
+[gd_scene load_steps=4 format=3 uid="uid://vlw5tm2jx07r"]
+
+[ext_resource type="PackedScene" uid="uid://cqkoyc86f5umd" path="res://levels/tutorial/assets/needle_and_silk/models/Aguja.fbx" id="1_jvf8j"]
+[ext_resource type="PackedScene" uid="uid://bnwuvfc0rv3k3" path="res://levels/tutorial/assets/needle_and_silk/models/Cuerda.fbx" id="2_5mhxy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wey8y"]
+size = Vector3(23.2982, 7.14233, 4.19946)
+
+[node name="Neddles And Silk" type="Node3D"]
+
+[node name="Root Scene" parent="." instance=ExtResource("1_jvf8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.575, 10.8885, -1.48648)
+
+[node name="Root Scene3" parent="." instance=ExtResource("1_jvf8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.575, 10.8885, 1.84052)
+
+[node name="Root Scene4" parent="." instance=ExtResource("1_jvf8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.34497, 10.8885, -1.48648)
+
+[node name="Root Scene5" parent="." instance=ExtResource("1_jvf8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.34497, 10.8885, 1.84052)
+
+[node name="Silks" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.575, 10.8885, -1.48648)
+
+[node name="Root Scene2" parent="Silks" instance=ExtResource("2_5mhxy")]
+
+[node name="Root Scene44" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 8.69199)
+
+[node name="Root Scene54" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 8.51199)
+
+[node name="Root Scene55" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 8.32199)
+
+[node name="Root Scene56" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 8.13199)
+
+[node name="Root Scene57" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 7.94699)
+
+[node name="Root Scene58" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 7.77699)
+
+[node name="Root Scene59" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 7.64699)
+
+[node name="Root Scene60" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 7.52199)
+
+[node name="Root Scene61" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 7.40199)
+
+[node name="Root Scene62" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 7.28199)
+
+[node name="Root Scene63" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 7.15699)
+
+[node name="Root Scene64" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 7.01199)
+
+[node name="Root Scene65" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 6.87199)
+
+[node name="Root Scene66" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 6.72199)
+
+[node name="Root Scene67" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 6.61699)
+
+[node name="Root Scene68" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.126781, -8.481, 6.512)
+
+[node name="Root Scene45" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 8.83699)
+
+[node name="Root Scene46" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 9.01699)
+
+[node name="Root Scene47" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 9.16199)
+
+[node name="Root Scene48" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 9.32699)
+
+[node name="Root Scene49" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 9.47199)
+
+[node name="Root Scene50" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 9.58199)
+
+[node name="Root Scene51" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 9.71699)
+
+[node name="Root Scene52" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 9.82199)
+
+[node name="Root Scene53" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.127272, -8.48127, 9.92199)
+
+[node name="Root Scene70" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(0.993, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.126781, -8.481, 10.027)
+
+[node name="Root Scene6" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+
+[node name="Root Scene7" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.44, 0)
+
+[node name="Root Scene8" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.715, 0)
+
+[node name="Root Scene9" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.93, 0)
+
+[node name="Root Scene10" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.135, 0)
+
+[node name="Root Scene11" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.305, 0)
+
+[node name="Root Scene12" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.495, 0)
+
+[node name="Root Scene13" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.71, 0)
+
+[node name="Root Scene14" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.91, 0)
+
+[node name="Root Scene15" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.12, 0)
+
+[node name="Root Scene16" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.26, 0)
+
+[node name="Root Scene17" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.425, 0)
+
+[node name="Root Scene18" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.595, 0)
+
+[node name="Root Scene19" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.745, 0)
+
+[node name="Root Scene20" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.905, 0)
+
+[node name="Root Scene21" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.055, 0)
+
+[node name="Root Scene22" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.22, 0)
+
+[node name="Root Scene23" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.355, 0)
+
+[node name="Root Scene24" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.5, 0)
+
+[node name="Root Scene25" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.63, 0)
+
+[node name="Root Scene26" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.8, 0)
+
+[node name="Root Scene27" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.98, 0)
+
+[node name="Root Scene28" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.13, 0)
+
+[node name="Root Scene29" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.33, 0)
+
+[node name="Root Scene30" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.515, 0)
+
+[node name="Root Scene31" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.72, 0)
+
+[node name="Root Scene32" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.915, 0)
+
+[node name="Root Scene33" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.095, 0)
+
+[node name="Root Scene34" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.285, 0)
+
+[node name="Root Scene35" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.505, 0)
+
+[node name="Root Scene36" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.68, 0)
+
+[node name="Root Scene37" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.865, 0)
+
+[node name="Root Scene38" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.035, 0)
+
+[node name="Root Scene39" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.24, 0)
+
+[node name="Root Scene40" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.415, 0)
+
+[node name="Root Scene41" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.605, 0)
+
+[node name="Root Scene42" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.79, 0)
+
+[node name="Root Scene43" parent="Silks" instance=ExtResource("2_5mhxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0108871, -7.02746, 0.0514956)
+
+[node name="Colliders" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.575, 10.8885, -1.48648)
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6964, -10.8637, 0.923474)
+shape = SubResource("BoxShape3D_wey8y")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Colliders"]

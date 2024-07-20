@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://ci8kecleabqy1"]
+[gd_scene load_steps=3 format=3 uid="uid://ci8kecleabqy1"]
 
 [ext_resource type="Script" path="res://controllers/controllable_character_controller/controllable_character_controller.gd" id="1_xw0ty"]
+[ext_resource type="AudioStream" uid="uid://b6ecml1w38quy" path="res://controllers/sounds/change_character_sfx.wav" id="2_8a7xh"]
 
 [node name="ControllableCharacterController" type="Node3D"]
 script = ExtResource("1_xw0ty")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_8a7xh")
+bus = &"SFX"
