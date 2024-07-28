@@ -19,7 +19,7 @@ script = ExtResource("1_8swn0")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.08637, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.993572, 0.0254652, -0.110302, 0, 0.97437, 0.224951, 0.113203, -0.223505, 0.968107, -6.77, 6.435, 13.441)
+transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, -12.16, -6.92, -5.184)
 fov = 90.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]

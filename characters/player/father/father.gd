@@ -68,6 +68,9 @@ func jump(jump_force: float) -> void:
 func idle() -> void:
 	velocity.x = move_toward(velocity.x, 0, speed)
 	velocity.z = move_toward(velocity.z, 0, speed)
+	if model.animation_player.current_animation == "Lift":
+		model.animation_player.animation_set_next("Lift", "Iddle")
+		return
 	if is_on_floor():
 		model.play_animation("Iddle")
 	
@@ -100,6 +103,7 @@ func lift_condition() -> bool:
 
 
 func lift() -> void:
+	velocity.x = 0
 	character_lifting = character_to_lift
 	is_lifting = true
 	character_lifting.is_being_lifted = true

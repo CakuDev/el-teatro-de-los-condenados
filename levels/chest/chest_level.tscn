@@ -45,11 +45,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.0815, -8.13805, -10.928)
 [node name="Neddles And Silk2" parent="Silk Thread4" instance=ExtResource("6_2p13x")]
 transform = Transform3D(-2.46969e-08, 0, 1, 0, 0.715, 0, -0.565, 0, -4.37114e-08, -42.1308, -0.358289, 3.06126)
 
-[node name="Silk Thread3" parent="." instance=ExtResource("5_ufxac")]
-transform = Transform3D(0.67154, 0.740969, 0, -0.740969, 0.67154, 0, 0, 0, 1, 21.1296, -7.16096, -10.928)
-
 [node name="Silk Thread2" parent="." instance=ExtResource("5_ufxac")]
-transform = Transform3D(0.303285, -0.9529, 0, 0.9529, 0.303285, 0, 0, 0, 1, 23.9579, -2.70567, -10.928)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.0815, -3.31263, -10.928)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, -1.55, 6.435, 19.131)
