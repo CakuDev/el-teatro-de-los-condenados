@@ -1,4 +1,4 @@
-#El Teatro de los Condenados
+# El Teatro de los Condenados
 
 Game developed for the LevelUp Game Jam 2024 with Godot 4.2.
 
